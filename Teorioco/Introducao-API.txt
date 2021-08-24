@@ -1,0 +1,46 @@
+Rest- Padrao(regras) de implmentação
+
+Restful- API que atende todas as regras
+
+JSON- Formato de resposta/ requisicao
+
+JSON - Objetc -{}
+
+	EX:
+{
+	Chave : valor {
+			idPessoa : 1,
+                        nomePessoa;Smauel
+			Idade:22
+		      }
+}
+
+
+
+
+Verbos- Tipo de Requests (requesição)
+Ex: Get(obter),Post
+
+
+Design Patern- Padrão de projeto
+Repository Pàttern - que utiliza de repositorios
+
+______________________________________________________________
+
+Domains (dominio) -> models- representa as entidades do BD 
+
+Controllers (controladores)- controla o fluxo de dados
+ 
+interfaces (interfaces)- define, o que a API vai fazer (contrato da app)
+
+Repositorios (repositorio)- definem como aquilo vai ser feito
+			    é ele que faz cominicação com o BD
+
+
+CRUD
+C-Create (criacao)
+R- Read (leitura/listar)
+U- Updatde (atulizar)
+D- Delete (deletar)
+
+
