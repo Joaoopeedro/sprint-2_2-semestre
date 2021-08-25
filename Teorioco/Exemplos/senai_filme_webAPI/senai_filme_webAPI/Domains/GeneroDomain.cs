@@ -9,7 +9,7 @@ namespace senai_filme_webAPI.Domains
     /// <summary>
     /// Classe representa a entidade (tabela) GENERO
     /// </summary>
-    public class GeneroDomains
+    public class GeneroDomain
     {
         public int idGenero { get; set; }
         public string nomeGenero { get; set; }

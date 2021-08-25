@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace senai_filme_webAPI.Domains
 {
-    public class FilmeDomains
+    public class FilmeDomain
     {
         public int idFilme { get; set; }
         public int idGenero { get; set; }
