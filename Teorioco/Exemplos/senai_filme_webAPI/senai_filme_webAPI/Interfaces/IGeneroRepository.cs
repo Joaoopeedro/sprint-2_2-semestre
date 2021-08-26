@@ -21,33 +21,33 @@ namespace senai_filme_webAPI.Interfaces
         /// Listar todos os generos
         /// </summary>
         /// <returns>Uma lista de gênero</returns>
-        List<GeneroDomains> ListarTodos();
+        List<GeneroDomain> ListarTodos();
 
         /// <summary>
         /// Busca um gênero através do seu id
         /// </summary>
         /// <param name="idGenero">id do gênero que será buscado</param>
         /// <returns>Um gênero buscado  </returns>
-        GeneroDomains BuscarPorId(int idGenero);
+        GeneroDomain BuscarPorId(int idGenero);
 
         /// <summary>
         /// Cadastra um novo gênero
         /// </summary>
         /// <param name="novoGenero">Objeto novoGenero com os novos dados</param>
-        void Cadastrar(GeneroDomains novoGenero);
+        void Cadastrar(GeneroDomain novoGenero);
 
         /// <summary>
         /// Atualiza um gênero existente
         /// </summary>
         /// <param name="generoAtualizado">Objeto generoAtualizado com os novos dados atualizados</param>
-        void AtualizarIdCorpo(GeneroDomains generoAtualizado);
+        void AtualizarIdCorpo(GeneroDomain generoAtualizado);
 
         /// <summary>
         /// Atualiza um gênero existente
         /// </summary>
         /// <param name="idGenero">id do gênero que será atualizado</param>
         /// <param name="generoAtualizado">Objeto generoAtualizado com os novos dados atualizados</param>
-        void AtualizarIdUrl(int idGenero, GeneroDomains generoAtualizado);
+        void AtualizarIdUrl(int idGenero, GeneroDomain generoAtualizado);
 
         /// <summary>
         /// Deleta um gênero existente
