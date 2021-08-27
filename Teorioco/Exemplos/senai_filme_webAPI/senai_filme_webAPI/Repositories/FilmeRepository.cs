@@ -27,9 +27,34 @@ namespace senai_filme_webAPI.Repositories
             throw new NotImplementedException();
         }
 
+
+        /// <summary>
+        /// Cadastrar um novo filme
+        /// </summary>
+        /// <param name="novoFilme"></param>
         public void Cadastrar(FilmeDomain novoFilme)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryInsert;
+
+                if (novoFilme.idGenero > 0)
+                {
+                    queryInsert = "INSERT INTO FILME (idGenero,tituloFilme) VALUES ("+novoFilme.idGenero +",'" + novoFilme.tituloFilme + "')";
+
+                }
+                else
+                {
+                    queryInsert = "INSERT INTO FILME (tituloFilme) VALUES ('" + novoFilme.tituloFilme + "')";
+                }
+
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand(queryInsert, con))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void Deletar(int idFilme)
@@ -44,7 +69,7 @@ namespace senai_filme_webAPI.Repositories
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectAll = "SELECT idFilme, G.idGenero, tituloFilme,nomeGenero FROM FILME F LEFT JOIN GENERO G ON F.idGenero = G.idGenero";
+                string querySelectAll = "SELECT idFilme,ISNULL(G.idGenero,0)AS idGenero  , tituloFilme,ISNULL(nomeGenero,'NAO CADASTRADO')AS nomegenero  FROM FILME F LEFT JOIN GENERO G ON F.idGenero = G.idGenero";
                     
 
 
