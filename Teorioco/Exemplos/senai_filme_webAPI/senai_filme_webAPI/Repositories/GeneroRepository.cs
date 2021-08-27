@@ -18,7 +18,7 @@ namespace senai_filme_webAPI.Repositories
         /// 
         /// </summary>
 
-        private string stringConexao = @"Data Source=NOTE0113D3\SQLEXPRESS; initial catalog=CATALOGO_TARDE; user Id=sa; pwd=Senai@132";
+        private string stringConexao = @"Data Source=DESKTOP-L3Q203S\SQLEXPRESS; initial catalog=CATALOGO_JOAO; user Id=sa; pwd=senai@132";
 
         public void AtualizarIdCorpo(GeneroDomain generoAtualizado)
         {
@@ -59,7 +59,7 @@ namespace senai_filme_webAPI.Repositories
             {
                 string querySelectAll = "SELECT idGenero,nomeGenero FROM GENERO";
 
-                //aBRE A CONEXAO COM O BANCO DE DADOS
+                //ABRE A CONEXAO COM O BANCO DE DADOS
                 con.Open();
 
                 SqlDataReader rdr;
