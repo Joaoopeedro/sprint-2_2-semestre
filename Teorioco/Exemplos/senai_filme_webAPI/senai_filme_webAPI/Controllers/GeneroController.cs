@@ -48,5 +48,13 @@ namespace senai_filme_webAPI.Controllers
             //Retornar o Status code 201 - Created
             return StatusCode(201);
         }
+
+        [HttpDelete("excluir/{id}")]
+        public IActionResult Delete(int id)
+        {
+            _generoRepository.Deletar(id);
+
+            return StatusCode(204);
+        }
     }
 }

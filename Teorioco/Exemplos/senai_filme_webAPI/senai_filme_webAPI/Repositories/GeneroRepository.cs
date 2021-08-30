@@ -44,12 +44,16 @@ namespace senai_filme_webAPI.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryInsert = "INSERT INTO GENERO (nomegenero) VALUES ('" + novoGenero.nomeGenero + "')";
+                string queryInsert = "INSERT INTO GENERO (nomegenero) VALUES (@nomeGenero)";
 
                 con.Open();
 
                 using (SqlCommand cmd  = new SqlCommand(queryInsert, con))
                 {
+
+                    cmd.Parameters.AddWithValue("@nomeGenero", novoGenero.nomeGenero);
+
+
                     cmd.ExecuteNonQuery();
                 }
 
@@ -58,7 +62,21 @@ namespace senai_filme_webAPI.Repositories
 
         public void Deletar(int idGenero)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryDelete = "DELETE FROM GENERO WHERE idGenero = @idGenero";
+
+                using (SqlCommand cmd = new SqlCommand(queryDelete,con))
+                {
+
+                    cmd.Parameters.AddWithValue("@idGenero", idGenero);
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                }
+
+            }
         }
 
         /// <summary>
