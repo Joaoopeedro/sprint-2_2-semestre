@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Teorioco\\exercicios_Revisao\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj": {}
+    "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Exercicios\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Teorioco\\exercicios_Revisao\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj": {
+    "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Exercicios\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Teorioco\\exercicios_Revisao\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Exercicios\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj",
         "projectName": "senai_pessoa_webAPI",
-        "projectPath": "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Teorioco\\exercicios_Revisao\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Exercicios\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\senai_pessoa_webAPI.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Teorioco\\exercicios_Revisao\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\2°semestre- SENAI\\sprint-2_2-semestre\\Exercicios\\senai_pessoa_webAPI\\senai_pessoa_webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

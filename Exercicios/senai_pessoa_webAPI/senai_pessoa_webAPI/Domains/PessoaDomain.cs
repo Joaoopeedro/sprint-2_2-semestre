@@ -13,6 +13,7 @@ namespace senai_pessoa_webAPI.Domains
     {
         public int idPessoa { get; set; }
         public string nomePessoa { get; set; }
+        public string cnh { get; set; }
 
     }
 }
