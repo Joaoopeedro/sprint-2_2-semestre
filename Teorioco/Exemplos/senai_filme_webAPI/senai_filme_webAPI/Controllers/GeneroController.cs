@@ -35,6 +35,55 @@ namespace senai_filme_webAPI.Controllers
             return Ok(listaGenero);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            GeneroDomain generoBuscado = _generoRepository.BuscarPorId(id);
+
+            if (generoBuscado == null)
+            {
+                return NotFound("Nenhum genero encontrado");
+            }
+
+            return Ok(generoBuscado);
+        }
+
+        [HttpPut]
+        public IActionResult PutIdBody(GeneroDomain generoAtualizado)
+        {
+
+            if (generoAtualizado.nomeGenero == null || generoAtualizado.idGenero <= 0)
+            {
+                return BadRequest(
+                        new
+                        {
+                            mensagem = "Nome ou o id do genero não foi informado ! "
+                        }
+                    );
+            }
+            GeneroDomain generobuscado = _generoRepository.BuscarPorId(generoAtualizado.idGenero);
+
+            if (generobuscado != null)
+            {
+                try
+                {
+                    _generoRepository.AtualizarIdCorpo(generoAtualizado);
+                    return NoContent();
+                }
+                catch (Exception codErro)
+                {
+                    return BadRequest(codErro);
+                }
+            }
+            return NotFound(
+                    new
+                    {
+                        mensagem = "Gênero nao encontrado",
+                        erroStatus = true
+                    }
+                );
+        }
+
         /// <summary>
         /// Cadastra um novo genero
         /// </summary>
@@ -47,6 +96,34 @@ namespace senai_filme_webAPI.Controllers
 
             //Retornar o Status code 201 - Created
             return StatusCode(201);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult PutPorId(int id, GeneroDomain generoAtualizado)
+        {
+            GeneroDomain generoBuscando = _generoRepository.BuscarPorId(id);
+
+            if (generoBuscando == null)
+            {
+                return NotFound(
+                        new
+                        {
+                            mensagem = "Gênero nao encontrado",
+                            erro = true
+                        }
+                    );
+            }
+
+            try
+            {
+                _generoRepository.AtualizarIdUrl(id, generoAtualizado);
+                return NoContent();
+            }
+            catch (Exception erro )
+            {
+                return BadRequest(erro);
+                
+            }
         }
 
         [HttpDelete("excluir/{id}")]
