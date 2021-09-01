@@ -10,5 +10,7 @@ namespace Senai.Rental.WebApi.Domains
         public int cod_mod { get; set; }
         public int cod_mar { get; set; }
         public string nomemod { get; set; }
+
+        public MarcaDomain MARCA { get; set; }
     }
 }

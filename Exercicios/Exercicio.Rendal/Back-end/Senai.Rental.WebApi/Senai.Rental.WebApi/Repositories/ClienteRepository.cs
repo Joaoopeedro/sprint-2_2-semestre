@@ -10,7 +10,8 @@ namespace Senai.Rental.WebApi.Repositories
 {
     public class ClienteRepository : IClienteRepository
     {
-        private string stringConexao = @"Data Source=DESKTOP-L3Q203S\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=senai@132";
+        //private string stringConexao = @"Data Source=DESKTOP-L3Q203S\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=senai@132";
+        private string stringConexao = @"Data Source=NOTE0113G2\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=Senai@132";
         public void AtualizarIdCorpo(ClienteDomain clienteAtualizado)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
@@ -22,7 +23,7 @@ namespace Senai.Rental.WebApi.Repositories
                     cmd.Parameters.AddWithValue("@nomeCliente", clienteAtualizado.nomeCliente);
                     cmd.Parameters.AddWithValue("@sobreNome", clienteAtualizado.sobreNome);
                     cmd.Parameters.AddWithValue("@dataNasc", clienteAtualizado.dataNascimento);
-                    cmd.Parameters.AddWithValue("@codCliente", clienteAtualizado.cod_cliente);
+                    cmd.Parameters.AddWithValue("@cod_Cliente", clienteAtualizado.cod_cliente);
 
                     con.Open();
 

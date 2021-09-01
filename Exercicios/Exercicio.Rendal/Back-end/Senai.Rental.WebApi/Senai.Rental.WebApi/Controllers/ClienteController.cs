@@ -52,7 +52,7 @@ namespace Senai.Rental.WebApi.Controllers
                 return BadRequest(
                         new
                         {
-                            mensagem = "Informações não foi informado corretamente ! "
+                            mensagem = "Informações não foram informados corretamente ! "
                         }
                     );
             }
@@ -88,7 +88,7 @@ namespace Senai.Rental.WebApi.Controllers
             return StatusCode(201);
         }
 
-        [HttpDelete("excluir/{id}")]
+        [HttpDelete("excluir/{cod}")]
         public IActionResult Delete(int cod)
         {
             _clienteRepository.Deletar(cod);
