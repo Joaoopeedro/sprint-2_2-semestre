@@ -13,11 +13,11 @@ namespace Senai.Rental.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class AluguelController : ControllerBase
+    public class AlugueisController : ControllerBase
     {
         private IAluguelRepository _AluguelRepository { get; set; }
 
-        public AluguelController()
+        public AlugueisController()
         {
             _AluguelRepository = new AluguelRepository();
         }
@@ -53,7 +53,7 @@ namespace Senai.Rental.WebApi.Controllers
         [HttpPut]
         public IActionResult PutIdBody(AluguelDomain aluguelAtualizado)
         {
-            if (aluguelAtualizado.cod_cliente == null || aluguelAtualizado.cod_veic == null || aluguelAtualizado.dataRetirada == null||aluguelAtualizado.dataDev == null||aluguelAtualizado.cod_aluguel == null)
+            if (aluguelAtualizado.cod_cliente <= 0 || aluguelAtualizado.cod_veic <= 0 || aluguelAtualizado.dataRetirada == null||aluguelAtualizado.dataDev == null||aluguelAtualizado.cod_aluguel == null)
             {
                 return BadRequest(
                         new

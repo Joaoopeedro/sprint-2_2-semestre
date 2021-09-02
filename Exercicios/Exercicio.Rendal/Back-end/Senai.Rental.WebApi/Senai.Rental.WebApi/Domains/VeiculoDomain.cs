@@ -12,5 +12,6 @@ namespace Senai.Rental.WebApi.Domains
         public int cod_mod { get; set; }
         public string placa { get; set; }
         public ModeloDomain MODELO { get; set; }
+        public EmpresaDomain EMPRESA { get; set; }
     }
 }

@@ -13,11 +13,11 @@ namespace Senai.Rental.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class ClienteController : ControllerBase
+    public class ClientesController : ControllerBase
     {
         private IClienteRepository _clienteRepository { get; set; }
 
-        public ClienteController()
+        public ClientesController()
         {
             _clienteRepository = new ClienteRepository();
 
