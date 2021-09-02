@@ -58,3 +58,7 @@ C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Se
 C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\net5.0\ref\Senai.Rental.WebApi.dll
 C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\net5.0\Senai.Rental.WebApi.pdb
 C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Senai.Rental.WebApi\Senai.Rental.WebApi\obj\Debug\net5.0\Senai.Rental.WebApi.genruntimeconfig.cache
+C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\fic\Desktop\sprint-2_2-semestre\Exercicios\Exercicio.Rendal\Back-end\Senai.Rental.WebApi\Senai.Rental.WebApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

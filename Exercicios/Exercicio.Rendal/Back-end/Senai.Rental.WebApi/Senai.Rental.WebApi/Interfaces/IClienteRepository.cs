@@ -40,5 +40,7 @@ namespace Senai.Rental.WebApi.Interfaces
         /// </summary>
         /// <param name="cod_cliente">id do cliente que sera deletado</param>
         void Deletar(int cod_cliente);
+
+        List<ClienteDomain> NomesCompletos();
     }
 }

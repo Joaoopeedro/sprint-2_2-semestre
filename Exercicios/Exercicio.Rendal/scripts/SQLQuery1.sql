@@ -24,3 +24,5 @@ WHERE cod_veic = 1
 
 
 INSERT INTO VEICULO(cod_empresa,cod_mod,placa) VALUES (@cod_empresa,@cod_mod,@placa)
+
+SELECT CONCAT(nomeCliente, ' ',sobreNome)[Nome Completo] FROM CLIENTE 

@@ -95,5 +95,13 @@ namespace Senai.Rental.WebApi.Controllers
             return StatusCode(204);
 
         }
+
+        [HttpGet("nomescompletos")]
+        public IActionResult GetNome()
+        {
+            List<ClienteDomain> listaCliente = _clienteRepository.NomesCompletos();
+            return Ok(listaCliente);
+
+        }
     }
 }
