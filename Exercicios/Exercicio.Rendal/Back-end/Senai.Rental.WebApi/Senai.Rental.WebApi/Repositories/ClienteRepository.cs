@@ -10,8 +10,8 @@ namespace Senai.Rental.WebApi.Repositories
 {
     public class ClienteRepository : IClienteRepository
     {
-        private string stringConexao = @"Data Source=DESKTOP-L3Q203S\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=senai@132";
-        //private string stringConexao = @"Data Source=NOTE0113G2\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=Senai@132";
+        //private string stringConexao = @"Data Source=DESKTOP-L3Q203S\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=senai@132";
+        private string stringConexao = @"Data Source=NOTE0113A1\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=Senai@132";
         public void AtualizarIdCorpo(ClienteDomain clienteAtualizado)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
@@ -131,6 +131,34 @@ namespace Senai.Rental.WebApi.Repositories
 
                     }
                 }
+            }
+            return listaCliente;
+        }
+
+        public List<ClienteDomain> NomesCompletos()
+        {
+            List<ClienteDomain> listaCliente = new List<ClienteDomain>();
+            using(SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string querySelectAll = "SELECT CONCAT(nomeCliente, ' ',sobreNome)[Nome Completo] FROM CLIENTE ";
+
+                con.Open();
+                SqlDataReader rdr;
+
+                using (SqlCommand cmd = new SqlCommand(querySelectAll,con))
+                {
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        ClienteDomain CLIENTE = new ClienteDomain()
+                        {
+                           nomeCliente = rdr[0].ToString()
+                        };
+                        listaCliente.Add(CLIENTE);
+
+                    }
+                }
+
             }
             return listaCliente;
         }

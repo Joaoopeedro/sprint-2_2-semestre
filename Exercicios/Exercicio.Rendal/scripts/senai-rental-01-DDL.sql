@@ -15,7 +15,7 @@ CREATE TABLE CLIENTE(
 	sobreNome VARCHAR (50)NOT NULL
 );
 ALTER TABLE CLIENTE 
-ADD dataNascimento 
+ADD dataNascimento date
 
 
 CREATE TABLE MARCA(

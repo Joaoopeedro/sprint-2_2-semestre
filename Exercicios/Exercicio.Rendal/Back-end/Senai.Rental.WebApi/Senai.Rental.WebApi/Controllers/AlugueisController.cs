@@ -53,7 +53,7 @@ namespace Senai.Rental.WebApi.Controllers
         [HttpPut]
         public IActionResult PutIdBody(AluguelDomain aluguelAtualizado)
         {
-            if (aluguelAtualizado.cod_cliente <= 0 || aluguelAtualizado.cod_veic <= 0 || aluguelAtualizado.dataRetirada == null||aluguelAtualizado.dataDev == null||aluguelAtualizado.cod_aluguel == null)
+            if (aluguelAtualizado.cod_cliente <= 0 || aluguelAtualizado.cod_veic <= 0 || aluguelAtualizado.dataRetirada < DateTime.Now||aluguelAtualizado.dataDev < DateTime.Now||aluguelAtualizado.cod_aluguel <= 0)
             {
                 return BadRequest(
                         new

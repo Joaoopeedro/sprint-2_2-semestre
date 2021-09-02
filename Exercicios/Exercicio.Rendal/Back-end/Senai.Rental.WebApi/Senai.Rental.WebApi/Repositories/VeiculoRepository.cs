@@ -10,7 +10,8 @@ namespace Senai.Rental.WebApi.Repositories
 {
     public class VeiculoRepository : IVeiculoRepository
     {
-        private string stringConexao = @"Data Source=DESKTOP-L3Q203S\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=senai@132";
+        //private string stringConexao = @"Data Source=DESKTOP-L3Q203S\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=senai@132";
+        private string stringConexao = @"Data Source=NOTE0113A1\SQLEXPRESS; initial catalog=T_Rental; user Id=sa; pwd=Senai@132";
         public void AtualizarIdCorpo(VeiculoDomain veiculoAtualizado)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
@@ -41,7 +42,7 @@ namespace Senai.Rental.WebApi.Repositories
                                             INNER JOIN EMPRESA E ON V.cod_empresa = E.cod_empresa
                                             INNER JOIN MODELO M ON V.cod_mod = M.cod_mod
                                             INNER JOIN MARCA MA ON M.cod_mar = MA.cod_mar
-                                            WHERE cod_veic = 1";
+                                            WHERE cod_veic = @cod_veic";
 
                 con.Open();
                 SqlDataReader reader;
