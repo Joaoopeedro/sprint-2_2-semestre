@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai_filme_webAPI.Domains;
 using senai_filme_webAPI.Interfaces;
@@ -18,6 +19,10 @@ namespace senai_filme_webAPI.Controllers
 
     //Define que é um controlador de API
     [ApiController]
+
+    // Define que todos os endpoints serão restritos
+    // ou seja, apenas usuários logados podem acessar
+    [Authorize]
     public class GeneroController : ControllerBase
     {
         private IGeneroRepository _generoRepository { get; set; }
@@ -35,6 +40,8 @@ namespace senai_filme_webAPI.Controllers
             return Ok(listaGenero);
         }
 
+
+        [Authorize(Roles = "administrador, comum")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
