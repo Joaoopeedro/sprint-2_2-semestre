@@ -44,3 +44,19 @@ CREATE TABLE ALUGUEL(
 	dataRetirada DATETIME,
 	dataDev DATETIME
 );
+
+CREATE TABLE TIPOUSUARIO(
+	idTipoUsuario int primary key identity,
+	tipoUsuario varchar(30) not null
+);
+
+
+CREATE TABLE USUARIOS(
+	idUsuario int primary key identity,
+	idTipoUsuario INT FOREIGN KEY REFERENCES TIPOUSUARIO (idTipoUsuario),
+	email varchar(100) not null unique,
+	senha varchar (10)not null,
+	
+);
+go
+

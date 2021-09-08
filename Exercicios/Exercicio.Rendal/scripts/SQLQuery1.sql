@@ -26,3 +26,6 @@ WHERE cod_veic = 1
 INSERT INTO VEICULO(cod_empresa,cod_mod,placa) VALUES (@cod_empresa,@cod_mod,@placa)
 
 SELECT CONCAT(nomeCliente, ' ',sobreNome)[Nome Completo] FROM CLIENTE 
+
+SELECT idUsuario,email,senha,tipoUsuario FROM USUARIOS U
+inner join TIPOUSUARIO TI ON U.idTipoUsuario = TI.idTipoUsuario

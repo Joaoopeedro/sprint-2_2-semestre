@@ -51,3 +51,12 @@ VALUES (1,2,'03-09-2021 10:29', '04-09-2021 11:29'), (2,2,'08-09-2021 12:30','09
 (1,4,'10-10-2021 17:48','11-10-2021 20:10');
 GO
 TRUNCATE TABLE ALUGUEL
+
+INSERT INTO TIPOUSUARIO (tipoUsuario)
+VALUES ('Comum'),('Administrador')
+go
+
+
+INSERT INTO USUARIOS (idTipoUsuario, email,senha)
+VALUES ('1','joao@gmail.com','123'),('2','adm@gmail.com','123')
+GO
